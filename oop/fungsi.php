@@ -2,7 +2,7 @@
 class crud extends Database{
 	function query($data){
 		$perintah = $this->koneksi->query($data);
-		if(!$perintah) die("Error query :".$this->koneksi->connect_error());
+		if(!$perintah) die("Error query :".$this->koneksi->error);
 		return $perintah;
 	}
 	function showData(){
