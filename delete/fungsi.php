@@ -4,7 +4,7 @@ function selectTb1(){
 	global $koneksi;
 	$sql="SELECT * FROM tabel1";
 	$perintah=mysqli_query($koneksi, $sql);
-	if(!$perintah) die("Gagal memilih tabel :".$koneksi->connect_error());
+	if(!$perintah) die("Gagal memilih tabel :".$koneksi->error);
 	return $perintah;
 }
 function deleteMultiTb1($data){
